@@ -1,8 +1,20 @@
+import { Route, Routes } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import HomePage from "./pages/HomePage"
+
 function App() {
 
   return (
     <>
-      <h1>Welcome to Project Management App</h1>
+
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<HomePage />}  />
+        <Route path="/projects" element={<p>Project List Page</p>}  />
+      </Routes>
+
+      
     </>
   )
 }
