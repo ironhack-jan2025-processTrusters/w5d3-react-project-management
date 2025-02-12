@@ -3,6 +3,7 @@ import axios from "axios";
 import Loader from "../components/Loader";
 
 import { API_URL } from "../config/api";
+import { Link } from "react-router-dom";
 
 function ProjectListPage() {
 
@@ -28,7 +29,9 @@ function ProjectListPage() {
             {projects.map((projectDetails) => {
                 return (
                     <div className="card" key={projectDetails.id}>
-                        <h3>{projectDetails.title}</h3>
+                        <Link to={`/projects/${projectDetails.id}`}>
+                            <h3>{projectDetails.title}</h3>
+                        </Link>
                     </div>
                 )
             })}
