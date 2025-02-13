@@ -1,5 +1,9 @@
 /* index.css */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   text-align: center;
@@ -31,6 +35,22 @@ textarea {
   margin: 10px;
 }
 
+.card-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 10%;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #94a7c8;
+  border-radius: 4px;
+}
+
 .Navbar {
   background: #515f7d;
   color: white;
@@ -46,16 +66,6 @@ textarea {
   color: white;
   font-size: 24px;
   font-weight: 600;
-}
-
-.card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background: #94a7c8;
-  border-radius: 4px;
 }
 
 .ProjectCard h3::after {
@@ -96,4 +106,15 @@ textarea {
 
 .TaskCard {
   background-color: #dfeef9;
+}
+
+@media (min-width: 768px) {
+  .card-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 5%;
+  }
+  .card-list .card {
+    flex: 0 1 33%;
+  }
 }

@@ -25,7 +25,7 @@ function ProjectListPage() {
 
 
     return (
-        <>
+        <div className="card-list">
             {projects.map((projectDetails) => {
                 return (
                     <div className="card" key={projectDetails.id}>
@@ -35,7 +35,7 @@ function ProjectListPage() {
                     </div>
                 )
             })}
-        </>
+        </div>
     );
 }
 
